@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="output.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>StarBucks</title>
+    </head>
+    <body>
+        <header class="relative z-30">
+            <nav class="bg-white shadow-md h-20 pt-2">
+              <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16 relative">
+                
+                <!-- Left side: Logo + Nav links (on PC) -->
+                <div class="flex items-center gap-8">
+                  <!-- Logo -->
+                  <a href="index.htm">
+                    <img src="img/logo.png" class="w-10 md:w-12" alt="Logo" />
+                  </a>
+          
+                  <!-- Nav links for PC -->
+                  <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="menu.htm" class="text-gray-700 hover:text-green-600 text-lg font-bold">Menu</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-green-600 text-lg font-bold">Rewards</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-green-600 text-lg font-bold">Gift Cards</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Right side: Buttons + Find a Store (on PC) -->
+                <div class="hidden md:flex items-center gap-8">
+                  <a href="#" id="location" class="hover:text-green-600 text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i> Find a Store
+                  </a>
+                  <button class="rounded-2xl border-2 py-1 px-4 hover:bg-gray-200 transition">
+                    Sign in
+                  </button>
+          
+                  <button class="bg-black text-white rounded-2xl border-2 py-1 px-4 hover:bg-gray-200 hover:text-black transition">
+                    Join now
+                  </button>
+          
+                </div>
+          
+                <!-- Hamburger Button for Mobile -->
+                <div class="block md:hidden">
+                  <button onclick="openHamburger()" class="text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                </div>
+          
+                <!-- Sidebar Menu (Mobile) -->
+                <div id="sidebar" class="fixed top-0 right-0 h-full w-4/5 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+                  <div class="flex justify-between items-center p-4 border-b">
+                    <button onclick="openHamburger()" class="text-2xl focus:outline-none">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <ul class="flex flex-col mt-6 space-y-4 px-4">
+                    <li><a href="menu.htm" class="text-gray-700 hover:text-green-600 text-lg font-bold">Menu</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-green-600 text-lg font-bold">Rewards</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-green-600 text-lg font-bold">Gift Cards</a></li>
+                    <hr />
+                    <div class="afterMenu max-w-50">
+                      <div class="buttons flex justify-between">
+                        <button class="rounded-2xl border-2 py-1 px-4 hover:bg-gray-200 transition">
+                          Sign in
+                        </button>
+                        <button class="bg-black text-white rounded-2xl border-2 py-1 px-4 hover:bg-gray-200 hover:text-black transition">
+                          Join now
+                        </button>
+                      </div>
+                      <br />
+                      <a href="#" id="location" class="hover:text-green-600 text-lg flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> Find a Store
+                      </a>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          
+          
+        
+        <main class="relative mt-10 md:mx-20">
+            <div class="part1 mb-10 flex flex-col md:flex-row">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 order-1 md:order-2">
+                    <img src="img/image1.webp" class="w-full h-full object-cover" alt="">
+                </div>
+                <!-- Text -->
+                <div class="w-full md:w-1/2 flex items-center justify-center bg-[#32462f] p-5 order-2 md:order-1">
+                    <div class="text-center"v>
+                        <h1 class="text-white font-bold text-2xl md:text-5xl mb-6">The Spring Edit</h1>
+                        <h2 class="text-white text-lg md:text-2xl mb-6">Fresh flavors, familiar joy.</h2>
+                        <button class="bg-none text-white rounded-2xl border-2 py-1 px-4 hover:bg-green-900 transition mb-6">View the menu</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="part2 mb-10 flex flex-col md:flex-row">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 order-1">
+                    <img src="img/image2.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <!-- Text -->
+                <div class="w-full md:w-1/2 flex items-center justify-center bg-[#5f4633] p-5 order-2">
+                    <div class="text-center">
+                        <h1 class="text-white font-bold text-2xl md:text-3xl mb-6">It's a great day for free coffee</h1>
+                        <h2 class="text-white text-lg md:text-xl mb-6">Start your Starbucks® Rewards journey with a coffee on us...</h2>
+                        <button class="bg-none text-white rounded-2xl border-2 py-1 px-4 hover:bg-amber-900 transition mb-6">Join now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="part3 mb-10 flex flex-col md:flex-row">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 order-1 md:order-2">
+                    <img src="img/image3.webp" class="w-full h-full object-cover" alt="">
+                </div>
+                <!-- Text -->
+                <div class="w-full md:w-1/2 flex items-center justify-center bg-[#32462f] p-5 order-2 md:order-1">
+                    <div class="text-center">
+                        <h1 class="text-white font-bold text-2xl md:text-5xl mb-6">Nondairy milk, no extra charge</h1>
+                        <h2 class="text-white text-lg md:text-xl mb-6">Customize your drink with your favorite nondairy milk...</h2>
+                        <button class="bg-none text-white rounded-2xl border-2 py-1 px-4 hover:bg-green-900 transition mb-6">Order now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="part4 mb-10 flex flex-col md:flex-row">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 order-1">
+                    <img src="img/image4.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <!-- Text -->
+                <div class="w-full md:w-1/2 flex items-center justify-center bg-[#006242] p-5 order-2">
+                    <div class="text-center">
+                        <h1 class="text-white font-bold text-2xl md:text-5xl mb-6">More reasons to stay awhile</h1>
+                        <h2 class="text-white text-lg md:text-xl mb-6">Mugs, glasses and the condiment bar are back...</h2>
+                        <button class="bg-none text-white rounded-2xl border-2 py-1 px-4 hover:bg-green-900 transition mb-6">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="textPart1 my-10 max-w-150 m-auto">
+                <p class="text-[13px] md:text-[16px] text-center mx-3 mt-10">*Valid for new Starbucks Rewards members for 7 days from sign up. Coupon will be available in the offers tab of your Starbucks app following sign up and may take up to 48 hours to arrive. Good at participating U.S. stores for a handcrafted menu-sized beverage with qualifying purchase ($8 max value). Qualifying purchase excludes alcohol, Starbucks Card and Card reloads. Limit one. Cannot be combined with other offers or discounts. Excludes delivery services. Sign up before 6/29/2025.</p>
+                <p class="text-[13px] md:text-[16px] text-center mx-3 mt-20">**Free refills of hot and iced brewed coffee or tea during same store visit. Excludes Cold Brew, Nitro Cold Brew, Iced Tea Lemonade, and flavored Iced Tea and Starbucks Refreshers® base. At participating stores. Visit <a href="https://starbucks.com/refills">http://starbucks.com/refills</a></p>
+            </div>
+        </main>
+
+
+        <footer class="py4 relative footer_footer__WFGdy md:mx-20">
+            <nav class="sb-global-gutters sb-global-gutters--maxWidthLayout py-10 ">
+                <!-- Accordion Container -->
+                <div class="block md:hidden space-y-4">
+
+                    <!-- About Us Accordion -->
+                    <div>
+                    <h2 class="text-base font-semibold" tabindex="-1">
+                        <button onclick="toggleAccordion('caretExpander1', 'caretIcon1')" aria-controls="caretExpander1" aria-expanded="false" 
+                        class="flex w-full items-center justify-between py-2 mb-2">
+                        <span>About Us</span>
+                        <svg id="caretIcon1" class="w-6 h-6 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.42384 10.5199C5.15866 10.8381 5.20166 11.311 5.51987 11.5762L11.1998 16.3094C11.6633 16.6957 12.3367 16.6957 12.8002 16.3094L18.4801 11.5762C18.7983 11.311 18.8413 10.8381 18.5762 10.5199C18.311 10.2017 17.8381 10.1587 17.5199 10.4239L12 15.0237L6.48014 10.4239C6.16193 10.1587 5.68901 10.2017 5.42384 10.5199Z"></path>
+                        </svg>
+                        </button>
+                    </h2>
+                
+                    <div id="caretExpander1" class="overflow-hidden transition-all duration-300 h-0">
+                        <ul class="flex flex-col pt-2">
+                        <li><a href="https://www.starbucks.com/about-us/" class="block py-2 text-gray-600 hover:text-green-600">Our Company</a></li>
+                        <li><a href="https://www.starbucks.com/coffee/" class="block py-2 text-gray-600 hover:text-green-600">Our Coffee</a></li>
+                        <li><a href="https://about.starbucks.com/" class="block py-2 text-gray-600 hover:text-green-600">About Starbucks</a></li>
+                        <li><a href="https://archive.starbucks.com/" class="block py-2 text-gray-600 hover:text-green-600">Starbucks Archive</a></li>
+                        <li><a href="https://investor.starbucks.com" class="block py-2 text-gray-600 hover:text-green-600">Investor Relations</a></li>
+                        <li><a href="https://customerservice.starbucks.com/" class="block py-2 text-gray-600 hover:text-green-600">Customer Service</a></li>
+                        <li><a href="https://www.starbucks.com/contact/" class="block py-2 text-gray-600 hover:text-green-600">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                
+                    <!-- Careers Accordion -->
+                    <div>
+                    <h2 class="text-base font-semibold" tabindex="-1">
+                        <button onclick="toggleAccordion('caretExpander2', 'caretIcon2')" aria-controls="caretExpander2" aria-expanded="false" 
+                        class="flex w-full items-center justify-between py-2 mb-2">
+                        <span>Careers</span>
+                        <svg id="caretIcon2" class="w-6 h-6 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.42384 10.5199C5.15866 10.8381 5.20166 11.311 5.51987 11.5762L11.1998 16.3094C11.6633 16.6957 12.3367 16.6957 12.8002 16.3094L18.4801 11.5762C18.7983 11.311 18.8413 10.8381 18.5762 10.5199C18.311 10.2017 17.8381 10.1587 17.5199 10.4239L12 15.0237L6.48014 10.4239C6.16193 10.1587 5.68901 10.2017 5.42384 10.5199Z"></path>
+                        </svg>
+                        </button>
+                    </h2>
+                
+                    <div id="caretExpander2" class="overflow-hidden transition-all duration-300 h-0">
+                        <ul class="flex flex-col pt-2">
+                        <li><a href="https://www.starbucks.com/careers/working-at-starbucks/culture-and-values/" class="block py-2 text-gray-600 hover:text-green-600">Culture and Values</a></li>
+                        <li><a href="https://about.starbucks.com/belonging-at-starbucks/" class="block py-2 text-gray-600 hover:text-green-600">Belonging at Starbucks</a></li>
+                        <li><a href="https://www.starbucks.com/careers/working-at-starbucks/education/" class="block py-2 text-gray-600 hover:text-green-600">College Achievement Plan</a></li>
+                        <li><a href="https://alumni.starbucks.com/" class="block py-2 text-gray-600 hover:text-green-600">Alumni Community</a></li>
+                        <li><a href="https://www.starbucks.com/careers/" class="block py-2 text-gray-600 hover:text-green-600">U.S. Careers</a></li>
+                        <li><a href="https://www.starbucks.com/careers/international-careers/" class="block py-2 text-gray-600 hover:text-green-600">International Careers</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                
+                    <!-- Social Impact Accordion -->
+                    <div>
+                    <h2 class="text-base font-semibold" tabindex="-1">
+                        <button onclick="toggleAccordion('caretExpander3', 'caretIcon3')" aria-controls="caretExpander3" aria-expanded="false" 
+                        class="flex w-full items-center justify-between py-2 mb-2">
+                        <span>Social Impact</span>
+                        <svg id="caretIcon3" class="w-6 h-6 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.42384 10.5199C5.15866 10.8381 5.20166 11.311 5.51987 11.5762L11.1998 16.3094C11.6633 16.6957 12.3367 16.6957 12.8002 16.3094L18.4801 11.5762C18.7983 11.311 18.8413 10.8381 18.5762 10.5199C18.311 10.2017 17.8381 10.1587 17.5199 10.4239L12 15.0237L6.48014 10.4239C6.16193 10.1587 5.68901 10.2017 5.42384 10.5199Z"></path>
+                        </svg>
+                        </button>
+                    </h2>
+                
+                    <div id="caretExpander3" class="overflow-hidden transition-all duration-300 h-0">
+                        <ul class="flex flex-col pt-2">
+                        <li><a href="https://about.starbucks.com/communities/" class="block py-2 text-gray-600 hover:text-green-600">Communities</a></li>
+                        <li><a href="https://about.starbucks.com/the-starbucks-foundation/" class="block py-2 text-gray-600 hover:text-green-600">Starbucks Foundation</a></li>
+                        <li><a href="https://about.starbucks.com/sustainability/" class="block py-2 text-gray-600 hover:text-green-600">Sustainability</a></li>
+                        <li><a href="https://www.starbucks.com/responsibility/reporting-hub/" class="block py-2 text-gray-600 hover:text-green-600">Environmental and Social Impact Reporting</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <!-- For Business Partners Accordion -->
+                    <div>
+                        <h2 class="text-base font-semibold" tabindex="-1">
+                        <button onclick="toggleAccordion('caretExpander4', 'caretIcon4')" aria-controls="caretExpander4" aria-expanded="false" 
+                            class="flex w-full items-center justify-between py-2 mb-2">
+                            <span>For Business Partners</span>
+                            <svg id="caretIcon4" class="w-6 h-6 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.42384 10.5199C5.15866 10.8381 5.20166 11.311 5.51987 11.5762L11.1998 16.3094C11.6633 16.6957 12.3367 16.6957 12.8002 16.3094L18.4801 11.5762C18.7983 11.311 18.8413 10.8381 18.5762 10.5199C18.311 10.2017 17.8381 10.1587 17.5199 10.4239L12 15.0237L6.48014 10.4239C6.16193 10.1587 5.68901 10.2017 5.42384 10.5199Z"></path>
+                            </svg>
+                        </button>
+                        </h2>
+                    
+                        <div id="caretExpander4" class="overflow-hidden transition-all duration-300 h-0">
+                        <ul class="flex flex-col pt-2">
+                            <li><a href="https://www.starbucks.com/business/landlord-faq/" class="block py-2 text-gray-600 hover:text-green-600">Landlord Support Center</a></li>
+                            <li><a href="https://www.starbucks.com/business/suppliers/" class="block py-2 text-gray-600 hover:text-green-600">Suppliers</a></li>
+                            <li><a href="https://www.starbuckscardb2b.com/" target="_blank" class="block py-2 text-gray-600 hover:text-green-600">Corporate Gift Card Sales</a></li>
+                            <li><a href="https://www.nestlecoffeepartnerssl.com/our-brands/we-proudly-serve-starbucks-coffee-program" class="block py-2 text-gray-600 hover:text-green-600">Office and Foodservice Coffee</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <!-- Order and Pick Up Accordion -->
+                    <div>
+                        <h2 class="text-base font-semibold" tabindex="-1">
+                        <button onclick="toggleAccordion('caretExpander5', 'caretIcon5')" aria-controls="caretExpander5" aria-expanded="false" 
+                            class="flex w-full items-center justify-between py-2 mb-2">
+                            <span>Order and Pick Up</span>
+                            <svg id="caretIcon5" class="w-6 h-6 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.42384 10.5199C5.15866 10.8381 5.20166 11.311 5.51987 11.5762L11.1998 16.3094C11.6633 16.6957 12.3367 16.6957 12.8002 16.3094L18.4801 11.5762C18.7983 11.311 18.8413 10.8381 18.5762 10.5199C18.311 10.2017 17.8381 10.1587 17.5199 10.4239L12 15.0237L6.48014 10.4239C6.16193 10.1587 5.68901 10.2017 5.42384 10.5199Z"></path>
+                            </svg>
+                        </button>
+                        </h2>
+                    
+                        <div id="caretExpander5" class="overflow-hidden transition-all duration-300 h-0">
+                        <ul class="flex flex-col pt-2">
+                            <li><a href="https://www.starbucks.com/rewards/mobile-apps/" class="block py-2 text-gray-600 hover:text-green-600">Order on the App</a></li>
+                            <li><a href="https://www.starbucks.com/menu" class="block py-2 text-gray-600 hover:text-green-600">Order on the Web</a></li>
+                            <li><a href="https://www.starbucks.com/stores-and-ordering/delivery/" target="_blank" class="block py-2 text-gray-600 hover:text-green-600">Delivery</a></li>
+                            <li><a href="https://www.starbucks.com/stores-and-ordering/" class="block py-2 text-gray-600 hover:text-green-600">Order and Pick Up Options</a></li>
+                            <li><a href="https://athome.starbucks.com/?utm_source=starbucks.com&utm_medium=referral&utm_campaign=footer" target="_blank" class="block py-2 text-gray-600 hover:text-green-600">Explore and Find Coffee for Home</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block bg-white py-10">
+                    <div class="max-w-7xl mx-auto px-4 grid grid-cols-5 gap-8 text-gray-700 text-sm">
+                      <!-- About Us -->
+                      <div>
+                        <h3 class="font-semibold text-black mb-4">About Us</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#">Our Company</a></li>
+                          <li><a href="#">Our Coffee</a></li>
+                          <li><a href="#">About Starbucks</a></li>
+                          <li><a href="#">Starbucks Archive</a></li>
+                          <li><a href="#">Investor Relations</a></li>
+                          <li><a href="#">Customer Service</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                        </ul>
+                      </div>
+                  
+                      <!-- Careers -->
+                      <div>
+                        <h3 class="font-semibold text-black mb-4">Careers</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#">Culture and Values</a></li>
+                          <li><a href="#">Belonging at Starbucks</a></li>
+                          <li><a href="#">College Achievement Plan</a></li>
+                          <li><a href="#">Alumni Community</a></li>
+                          <li><a href="#">U.S. Careers</a></li>
+                          <li><a href="#">International Careers</a></li>
+                        </ul>
+                      </div>
+                  
+                      <!-- Social Impact -->
+                      <div>
+                        <h3 class="font-semibold text-black mb-4">Social Impact</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#">Communities</a></li>
+                          <li><a href="#">Starbucks Foundation</a></li>
+                          <li><a href="#">Sustainability</a></li>
+                          <li><a href="#">Environmental and Social Impact Reporting</a></li>
+                        </ul>
+                      </div>
+                  
+                      <!-- For Business Partners -->
+                      <div>
+                        <h3 class="font-semibold text-black mb-4">For Business Partners</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#">Landlord Support Center</a></li>
+                          <li><a href="#">Suppliers</a></li>
+                          <li><a href="#">Corporate Gift Card Sales</a></li>
+                          <li><a href="#">Office and Foodservice Coffee</a></li>
+                        </ul>
+                      </div>
+                  
+                      <!-- Order and Pick Up -->
+                      <div>
+                        <h3 class="font-semibold text-black mb-4">Order and Pick Up</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#">Order on the App</a></li>
+                          <li><a href="#">Order on the Web</a></li>
+                          <li><a href="#">Delivery</a></li>
+                          <li><a href="#">Order and Pick Up Options</a></li>
+                          <li><a href="#">Explore and Find Coffee for Home</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="sb-rule py5" />
+                <div class="flex flex-col  gap-6">
+    
+                    <!-- Social Icons -->
+                    <div class="flex flex-wrap gap-4">
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-spotify"></i>
+                      </a>
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-pinterest-p"></i>
+                      </a>
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                      <a href="#" class="flex items-center justify-center w-10 h-10 bg-black rounded-full text-white">
+                        <i class="fab fa-x-twitter"></i>
+                      </a>
+                    </div>
+                
+                    <!-- Links -->
+                    <div class="flex flex-col gap-3 text-left">
+                      <a href="#" class="text-gray-800 hover:underline">Privacy Notice</a>
+                      <a href="#" class="text-gray-800 hover:underline">Consumer Health Privacy Notice</a>
+                      <a href="#" class="text-gray-800 hover:underline">Terms of Use</a>
+                      <a href="#" class="text-gray-800 hover:underline">Do Not Share My Personal Information</a>
+                      <a href="#" class="text-gray-800 hover:underline">CA Supply Chain Act</a>
+                      <a href="#" class="text-gray-800 hover:underline">Accessibility</a>
+                      <a href="#" class="text-gray-800 hover:underline">Cookie Preferences</a>
+                    </div>
+                
+                  </div>
+                
+                  <!-- Bottom Text -->
+                  <div class="mt-8 text-left text-gray-500 text-sm">
+                    © 2025 Starbucks Coffee Company. All rights reserved.
+                  </div>
+            </nav>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>

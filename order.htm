@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Basket - Starbucks</title>
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <header class="bg-[#1e3932] text-white py-4 px-6 flex justify-between items-center">
+    <a href="menu.htm" class="flex items-center gap-3 text-white hover:underline">
+      <i class="fa-solid fa-chevron-left"></i>
+      <span>Back to Menu</span>
+    </a>
+    <h1 class="text-xl font-bold">Your Basket</h1>
+    <div></div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-6">
+
+    <div id="prCase" class="space-y-4"></div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+      <h2 class="text-xl font-bold mb-4">Order Summary</h2>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-gray-700">Subtotal:</span>
+        <span id="subtotal" class="font-semibold">$0.00</span>
+      </div>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-gray-700">Tax & Fees:</span>
+        <span id="tax" class="font-semibold">$0.00</span>
+      </div>
+      <hr class="my-2" />
+      <div class="flex justify-between items-center text-lg font-bold">
+        <span>Total:</span>
+        <span id="total">$0.00</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="order.js"></script>
+</body>
+</html>
