@@ -1,4 +1,4 @@
-# ☕ Starbucks Menu Web App
+# ☕ Starbucks Web App
 
 A responsive and interactive Starbucks-style menu web app built with **HTML**, **Tailwind CSS**, **JavaScript**, and **jQuery**. Users can browse categories like drinks, food, and at-home coffee, view product details, and add items to their order.
 
