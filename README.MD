@@ -11,9 +11,10 @@ A responsive and interactive Starbucks-style menu web app built with **HTML**, *
 - 🧠 Smart rendering for both nested and flat product structures
 - 🧭 Sidebar navigation and accordion menus for a smooth UX
 
-## 📁 Project Structure
-
-├── index.htm # Landing or home page (optional) ├── menu.htm # Main menu interface ├── main.js # JavaScript logic for fetching and rendering data ├── output.css # Compiled Tailwind CSS ├── style.css # Additional custom styles ├── img/ # Image assets like logo and loading spinner ├── README.md # This file
+## 📁 Project pages
+- Landing page
+- Menu
+- Cart
 
 markdown
 Copy
